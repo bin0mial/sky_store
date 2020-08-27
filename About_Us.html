@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta http-equiv="refresh" content="20"> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/fixes.css">
+	<title>Computer Shop</title>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 style="font-weight: bold;">About Us</h2>
+				<p style="font-size: xx-large">
+					<span class="wow infinite rubberBand" style="position: absolute; font-weight: bolder;">Who are we?</span><br>
+					<div class="col-lg-5 col-xs-push-1">
+						<p style="font-size: large;">
+							We are group of people really can't bear getting scammed on.<br><br>
+							We decided to make a stop for that scam so no one suffer like us.<br><br>
+							We thought and we developed the idea and build our website.<br><br>
+							Our website can help you so much even if you someone scam on you we provide a 100% to you and your money also you can get back your money if someone really have scammed you, we will make a team to search about if you was scammed or not, but if you were lying it will be againest the website low, as website is very strong also belong to governement you will pay a fee for that. <br><br>
+							Please read our user manual to know how to use the site and thank you for choosing our website 💓.
+						</p>
+							<h3>Our <a href="User_Manual.pdf">user manual</a>, and <a href="User_Manual.pdf" download="download">user manual</a> to download.</h3>
+					</div>
+				</p>				
+			</div>
+		</div>
+
+		<footer class="row" style="background-color: red; color: white;" id="footer"></footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script lang="javascript">
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	$(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html");
+      putDate();
+    });
+    function putDate(){
+		if($("#last_update").length){
+			$("#last_update").text(today);
+		}
+		else{
+			setTimeout(putDate, 1);
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta http-equiv="refresh" content="20"> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/fixes.css">
+	<title>Computer Shop</title>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 style="font-weight: bold;">Join Us!</h2>
+				<p style="font-size: larger">
+					We are hiring <span class="wow infinite heartBeat" style="position: absolute; font-weight: bolder;">💓</span>
+					<div class="col-lg-5 col-xs-push-1">
+						<p>
+							Well a great chance to join us we are hiring for the following jobs with high salaries 🙊:
+							<ul>
+								<li>Software Engineer</li>
+								<li>Database Administrator</li>
+								<li>Data Science</li>
+								<li>Big Data</li>
+								<li>Markting</li>
+							</ul>
+								<div class="wow infinite shake animation-duration: 0.15s;" data-wow-duration="10s" style="position: absolute;font-weight: bolder">Join us if you are interested!</div><br>
+							Fill the below data and we will comunicate with you via <b>E-mail</b>
+							<ol>
+								<li>Leave your full <a href="#Name">Name</a></li>
+								<li>Leave your <a href="#Email">Email</a> down there</li>
+								<li>Tell us your previous <a href="#Experience">Experience</a></li>
+								<li>Talk to us about ur future <a href="#Expectations">Expectations</a></li>
+								<li>Upload your <a href="#CV">CV</a></li>
+								<li>Push the <a href="#Send">Submit</a> to send us your data</li>
+								<li>If you accepted you will recieve an E-mail from us</li>
+							</ol>
+							Thank you!
+						</p>
+					</div>
+				</p>				
+			</div>
+			<div class="col-xs-12">
+				<div class="tab-content thumbnail">
+					<h2 style="font-weight: bold;">Please fill the following data.</h2>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="Name" class="col-xs-2 col-md-1">Name:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="email" id="Name" placeholder="Name" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Email" class="col-xs-2 col-md-1">Email:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="email" id="Email" placeholder="Email" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Experience" class="col-xs-2 col-md-1">Experience:</label>
+							<div class="col-xs-10 col-md-11">
+								<textarea type="text" id="Experience" placeholder="Experience" class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Expectations" class="col-xs-2 col-md-1">Expectations:</label>
+							<div class="col-xs-10 col-md-11">
+								<textarea type="text" id="Expectations" placeholder="Expectations" class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="CV" class="col-xs-2 col-md-1">CV:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="file" id="CV" placeholder="CV" class="">
+							</div>
+						</div>
+						<div class="form-group row" id="Send">
+							<button type="submit" class="btn btn-primary col-xs-5 col-xs-offset-3">Submit</button>
+						</div>	
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer class="row" style="background-color: red; color: white;" id="footer"></footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script lang="javascript">
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	$(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html");
+      putDate();
+    });
+    function putDate(){
+		if($("#last_update").length){
+			$("#last_update").text(today);
+		}
+		else{
+			setTimeout(putDate, 1);
+		}
+	}
+</script>
+</html>

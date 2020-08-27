@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta http-equiv="refresh" content="20"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/fixes.css">
+	<title>Computer Shop</title>
+</head>
+<body>
+	<div class="container">
+		<div id="header"></div>
+		<div class="row">
+			<h1 class="col-xs-12" style="font-weight: bolder;">Please login or register</h1>
+			<p class="col-xs-12">If you already have an account please login, if you don't have one please click register and fill the data.</p>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#par1" data-toggle="tab">Login</a></li>
+				<li><a href="#par2" data-toggle="tab">Register</a></li>
+			</ul>
+			<div class="tab-content thumbnail">
+				<div class="tab-pane fade active in" id="par1">
+					<h2 style="font-weight: bold;">Please fill the following data.</h2>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="email" class="col-xs-2 col-md-1">Email:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="email" id="email" placeholder="Email" class="form-control">
+							</div>
+						</div>
+						<div class="form-group"">
+							<label for="password" class="col-xs-2 col-md-1">Password:</label>
+							<div class="col-xs-10 col-md-11">
+							<input type="password" id="password" placeholder="Password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="checkbox col-xs-offset-2 col-xs-12 col-md-offset-1">
+								<label><input type="checkbox">Remember me</label>
+							</div>
+						</div>
+						<div class="form-group row">
+							<button type="submit" class="btn btn-primary col-xs-offset-2 col-xs-2 col-md-offset-1">Login</button>
+						</div>			
+					</form>
+
+				</div>
+				<div class="tab-pane fade" id="par2">
+					<h2 style="font-weight: bold;">Please fill the following data.</h2>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="name" class="col-xs-2 col-md-1">Name:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="text" id="name" placeholder="Name" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="col-xs-2 col-md-1">Email:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="email" id="email" placeholder="Email" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="phone" class="col-xs-2 col-md-1">Phone Number:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="text" id="phone" placeholder="Phone Number" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-xs-2 col-md-1">Password:</label>
+							<div class="col-xs-10 col-md-11">
+								<input type="password" id="password" placeholder="Password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group"">
+							<label for="repassword" class="col-xs-2 col-md-1">Validate Password:</label>
+							<div class="col-xs-10 col-md-11">
+							<input type="repassword" id="repassword" placeholder="Validate Password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 col-md-1">I'm a:</label>
+							<div class="col-xs-10 col-md-11">
+								
+
+								<div class="panel-group" id="mypanel">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<a href="#buyer" data-toggle="collapse" data-parent="#mypanel" id='setbuyer'><div style="font-size: large;"><input type="radio" name="status" id="0"> Buyer</div></a>
+										</div>
+
+										<div class="collapse panel-collapse" id="buyer">
+											<div class="panel-body">
+												<p>I only buy devices for my own or for selling it in another place.</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											
+											<a href="#seller" data-toggle="collapse" id='setseller'><div style="font-size: large;"><input type="radio" name="status" id="1"> Seller</div></a>
+										</div>
+
+										<div class="collapse panel-collapse" data-parent="#mypanel" id="seller">
+											<div class="panel-body">
+												<p>I'm a seller I only sell in market for my own or for company.</p>
+											</div>
+										</div>
+									</div>	
+
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											
+											<a href="#buyerseller" data-toggle="collapse" id='setboth'><div style="font-size: large;"><input type="radio" name="status" id="2"> Both buyer and seller</div></a>
+										</div>
+
+										<div class="collapse panel-collapse" data-parent="#mypanel" id="buyerseller">
+											<div class="panel-body">
+												<p>I'm a user or a company I buy and sell devices.</p>
+											</div>
+										</div>
+									</div>			
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="checkbox col-xs-offset-2 col-xs-12 col-md-offset-1">
+								<label><input type="checkbox">I agree licenes agreement</label>
+							</div>
+						</div>
+						<div class="form-group row">
+							<button type="submit" class="btn btn-primary col-xs-offset-2 col-xs-2 col-md-offset-1">Register</button>
+						</div>			
+					</form>
+
+
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+		<footer class="row" style="background-color: red; color: white;" id="footer"></footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	$(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html");
+      putDate();
+    });
+	$(document).ready(function() {
+		$("#setbuyer").click(function(event) {
+			$("#0").prop("checked",true);
+		});
+		$("#setseller").click(function(event) {
+			$("#1").prop("checked",true);
+		});
+		$("#setboth").click(function(event) {
+			$("#2").prop("checked",true);
+		});
+	});
+	function putDate(){
+		if($("#last_update").length){
+			$("#last_update").text(today);
+		}
+		else{
+			setTimeout(putDate, 1);
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta http-equiv="refresh" content="20"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/fixes.css">
+	<title>Computer Shop</title>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 style="font-weight: bold;">Contact Us</h2>
+				<p style="font-size: xx-large">
+					<span class="wow infinite heartBeat" style="position: absolute; font-weight: bolder;">We made it Easy!</span><br>
+					<div class="col-lg-5 col-xs-push-1">
+						<p style="font-size: x-large;">
+							Group and North America Headquarters<br><br>
+
+							DATA Inc.<br>
+							72 Summit Avenue<br>
+							Montvale, NJ 07645, USA<br>
+							Tel: (201) 802-9800<br>
+							Fax: (201) 802-9808<br>
+							Email: infonj@dataincusa.com<br><br>
+
+							Central New Jersey<br><br>
+
+							DATA Inc.<br>
+							510 Thornall Street<br>
+							Suite 370<br>
+							Edison, NJ 08837, USA<br>
+							Tel: (201) 957-1740<br>
+							Email: infonj@dataincusa.com
+						</p>
+					</div>
+				</p>				
+			</div>
+		</div>
+
+		<footer class="row" style="background-color: red; color: white;" id="footer"></footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script lang="javascript">
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	$(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html");
+      putDate();
+    });
+    function putDate(){
+		if($("#last_update").length){
+			$("#last_update").text(today);
+		}
+		else{
+			setTimeout(putDate, 1);
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta http-equiv="refresh" content="20"> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/fixes.css">
+	<title>Computer Shop</title>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h1><b>Android Phones:</b></h1>				
+			</div>
+			<div class="col-md-10 col-xs-12 col-md-push-1">
+				<div class="row">
+					<div class="col-xs-3 thumbnail">
+						<div class="col-xs-12">
+							<img src="photos/Phones/1.jpg" style="width: 100%">
+						</div>
+						<div class="col-xs-12">
+							<h3>Huawei Y5 Prime 2018 Dual SIM</h3>
+							<p>Huawei Y5 Prime 2018 Dual SIM - 16GB, 2GB RAM ,4G LTE, Blue</p>
+						</div>	
+						<button class="btn btn-primary btn-group-justified">Buy Now!</button>
+					</div>
+					<div class="col-xs-3 thumbnail">
+						<div class="col-xs-12">
+							<div class="wow infinite bounceIn" data-wow-duration="2s">
+								<img src="photos/ads/30-sale.png" style="width: 50%;position: absolute;z-index: 1">
+							</div>
+							<img src="photos/Phones/2.jpg" style="width: 100%">
+						</div>
+						<div class="col-xs-12">
+							<h3>HUAWEI MATE 20 PRO Dual Sim</h3>
+							<p>HUAWEI MATE 20 PRO Dual Sim - 128GB, 4G LTE, TWILIGHT</p>
+						</div>
+						<button class="btn btn-primary btn-group-justified">Buy Now!</button>		
+					</div>
+					<div class="col-xs-3 thumbnail">
+						<div class="col-xs-12">
+							<img src="photos/Phones/3.jpg" style="width: 100%">
+						</div>
+						<div class="col-xs-12">
+							<h3>Nokia 3 Dual Sim</h3>
+							<p>Nokia 3 Dual Sim - 16GB, 2GB RAM, 4G LTE, Tempered Blue</p>
+						</div>
+						<button class="btn btn-primary btn-group-justified">Buy Now!</button>	
+					</div>
+					<div class="col-xs-3 thumbnail">
+						<div class="col-xs-12">
+							<div class="wow infinite bounceIn" data-wow-duration="2s">
+								<img src="photos/ads/50-sale.png" style="width: 50%;position: absolute;z-index: 1">
+							</div>
+							<img src="photos/Phones/4.jpg" style="width: 100%">
+						</div>
+						<div class="col-xs-12">
+							<h3>Samsung Galaxy Note 8 Dual SIM</h3>
+							<p>Samsung Galaxy Note 8 Dual SIM - 64GB, 6GB RAM, 4G LTE, Orchid Grey</p>
+						</div>
+						<button class="btn btn-primary btn-group-justified">Buy Now!</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3 thumbnail">
+						<div class="col-xs-12">
+							<div class="wow infinite bounceIn" data-wow-duration="2s">
+								<img src="photos/ads/50-sale.png" style="width: 50%;position: absolute;z-index: 1">
+							</div>
+							<img src="photos/Phones/5.jpg" style="width: 100%">
+						</div>
+						<div class="col-xs-12">
+							<h3>Oppo A3S Dual SIM</h3>
+							<p>Oppo A3S Dual SIM - 16GB, 2GB RAM, 4G LTE, Purple</p>
+						</div>
+						<button class="btn btn-primary btn-group-justified">Buy Now!</button>		
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="row" style="background-color: red; color: white;" id="footer"></footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script lang="javascript">
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	$(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html");
+      putDate();
+    });
+    function putDate(){
+		if($("#last_update").length){
+			$("#last_update").text(today);
+		}
+		else{
+			setTimeout(putDate, 1);
+		}
+	}
+	
+	$(document).ready(function() {
+		var maxHeight = -1;
+		$(".thumbnail").each(function() {
+			if ($(this).height() > maxHeight) {
+     		maxHeight = $(this).height();
+    		}
+		});
+		$(".thumbnail").each(function() {
+     		$(this).height(maxHeight);
+		});
+		$(".btn-primary").each(function(){
+			this.style.position = 'absolute';
+			this.style.bottom = '1px';
+			this.style.width = '97%';
+		});
+	});
+</script>
+</html>
